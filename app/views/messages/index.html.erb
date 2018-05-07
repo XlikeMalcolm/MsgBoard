@@ -1,0 +1,9 @@
+<% provide(:title, "") %>
+
+<% @messages.each do |message| %> 
+	<div class="message"> 
+		<p class="content"><%= message.content %></p> 
+		<p class="time"><%= time_ago_in_words(message.created_at) %> ago</p> 
+	</div> 
+<% end %>
+<%= link_to 'New Message', "messages/new" %>
